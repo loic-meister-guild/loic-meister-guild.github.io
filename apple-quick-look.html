@@ -15,9 +15,18 @@
 
 <body>
     <div>
-        <a rel="ar" href="/assets/models/toy_drummer.usdz">
+        <a id="ar-link" rel="ar" href="/assets/models/toy_drummer.usdz">
             <img src="/assets/models/drummertoy_2x.jpg">
         </a>
     </div>
+    <script>
+        const linkElement = document.getElementById("ar-link");
+linkElement.addEventListener("message", function (event) {   
+    if (event.data == "_apple_ar_quicklook_button_tapped") {
+        // handle the user tap.   
+        alert(' user tap')
+    }
+}, false)
+    </script>
 </body>
 </html>
